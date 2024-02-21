@@ -1,5 +1,5 @@
 import ExpenseItem from './ExpenseItem';
-import Card from './Card';
+import Card from '../UI/Card';
 
 const expenses = [
   { date: new Date("March 1 2024"), expense: "Food", expenseAmount: "Rs 1000" },
@@ -66,7 +66,7 @@ const expenses = [
 ];
 
 
-function Expense() {
+const Expense = () => {
   return (
     <Card className="expense" >
         <div style={{backgroundColor:"cyan", width:"70%", height:"100%", padding : "2%"}}>
