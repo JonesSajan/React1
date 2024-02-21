@@ -1,0 +1,31 @@
+const AddExpenseForm = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Title................ ',event.target[1].value);
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div className="new-expense__controls">
+                <div className="new-expense__control">
+                    <label htmlFor="">Title</label>
+                    <input type="text" />
+                </div>
+                <div className="new-expense__control">
+                    <label htmlFor="">Amount</label>
+                    <input type="number" min="0.01" />
+                </div>
+                <div className="new-expense__control">
+                    <label htmlFor="">Date</label>
+                    <input type="date" min="2020-01-01"/>
+                </div>
+                <div className="new-expense__actions">
+                    <button type="submit">Add Expense</button>
+                </div>
+            </div>
+        </form>
+    )
+}
+
+export default AddExpenseForm
