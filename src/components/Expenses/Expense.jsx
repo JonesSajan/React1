@@ -67,6 +67,9 @@ const expenses = [
 
 
 const Expense = () => {
+  const handleDelete = (e) => {
+    alert(e)
+  };
   return (
     <Card className="expense" >
         <div style={{backgroundColor:"cyan", width:"70%", height:"100%", padding : "2%"}}>
