@@ -1,10 +1,10 @@
 import AddExpenseForm from "./AddExenseForm"
 
-const NewExpenses = () => {
+const NewExpenses = ({onSubmit}) => {
 
     return (
         <div className="new-expense">
-            <AddExpenseForm/>
+            <AddExpenseForm onSubmit={onSubmit}/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddExpenseForm = () => {
+const AddExpenseForm = ({onSubmit}) => {
 
     const [title, setTitle] = useState("");
     const [date, setDate] = useState("");
@@ -8,6 +8,8 @@ const AddExpenseForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const expense =   { date: new Date(date), expense: title, expenseAmount: amount }
+        onSubmit(expense)
         setTitle("")
         setAmount("")
         setDate("")

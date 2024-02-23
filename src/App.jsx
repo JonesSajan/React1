@@ -68,10 +68,20 @@ const expenses = [
 ];
 
 function App() {
+
+  const [expenseList, setExpenseList] = useState(expenses)
+  
+  const onSubmit = (expense) => {
+    setExpenseList((prevValue)=>{
+      return [expense, ...prevValue];
+    })
+  };
+
+
   return (
     <div>
-    <NewExpenses/>
-    <Expense expenses={expenses}/>
+    <NewExpenses onSubmit={onSubmit}/>
+    <Expense expenses={expenseList}/>
     </div>
   );
 }
