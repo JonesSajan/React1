@@ -45,7 +45,7 @@ const expenses = [
   { date: new Date("April 8 2018"), expense: "Medical", expenseAmount: "Rs 1100" },
   { date: new Date("April 9 2024"), expense: "Clothing", expenseAmount: "Rs 2100" },
   { date: new Date("April 10 2024"), expense: "Education", expenseAmount: "Rs 5500" },
-  { date: new Date("April 11 2024"), expense: "Travel", expenseAmount: "Rs 3800" },
+  { date: new Date("April 11 2022"), expense: "Travel", expenseAmount: "Rs 3800" },
   { date: new Date("April 12 2024"), expense: "Charity", expenseAmount: "Rs 600" },
   { date: new Date("April 13 2024"), expense: "Savings", expenseAmount: "Rs 4200" },
   { date: new Date("April 14 2024"), expense: "Investment", expenseAmount: "Rs 6200" },
