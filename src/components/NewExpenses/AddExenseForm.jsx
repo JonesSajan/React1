@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddExpenseForm = ({onSubmit}) => {
+const AddExpenseForm = ({onSubmit,onAddExpense}) => {
 
     const [title, setTitle] = useState("");
     const [date, setDate] = useState("");
@@ -13,6 +13,7 @@ const AddExpenseForm = ({onSubmit}) => {
         setTitle("")
         setAmount("")
         setDate("")
+        onAddExpense(false)
     };
 
     const handleTitleChange = (event) => {

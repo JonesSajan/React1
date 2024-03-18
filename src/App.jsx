@@ -1,6 +1,7 @@
 import './App.css';
 import Expense from './components/Expenses/Expense';
 import NewExpenses from './components/NewExpenses/NewExpenses';
+import AddExpenseButton from './components/NewExpenses/AddExpenseButton';
 import { useState } from 'react';
 
 const expenses = [
@@ -70,17 +71,26 @@ const expenses = [
 function App() {
 
   const [expenseList, setExpenseList] = useState(expenses)
-  
+  const [addExpense, setAddExpense] = useState(false)
+  let firstComponent ;
+
+  const handleAddExpense = (flag) =>{
+    alert("triggered.........")
+    setAddExpense(flag);
+  }
+
   const onSubmit = (expense) => {
     setExpenseList((prevValue)=>{
       return [expense, ...prevValue];
     })
   };
+  alert(addExpense)
+  addExpense===false? firstComponent =  <AddExpenseButton onAddExpense={handleAddExpense}/> : firstComponent = <NewExpenses onSubmit={onSubmit} onAddExpense={handleAddExpense}/> 
 
 
   return (
     <div>
-    <NewExpenses onSubmit={onSubmit}/>
+    {firstComponent}
     <Expense expenses={expenseList}/>
     </div>
   );
